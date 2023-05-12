@@ -1,4 +1,4 @@
-//jshint esversion:6
+
 require("dotenv").config();
 const express = require("express");
 const ejs = require("ejs");
@@ -127,7 +127,7 @@ app.get("/submit", function(req, res){
   if(req.isAuthenticated()){
     res.render("submit");
   } else {
-    res.render("/login");
+    res.redirect("/login");
   }
 });
 
